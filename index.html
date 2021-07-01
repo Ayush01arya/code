@@ -1,0 +1,2859 @@
+<!-- Created by Kabir Arya-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE</title>
+    <!-- Highlight JS Theme-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.0.1/styles/atom-one-dark.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <style>
+        
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    width: calc(100% + calc(100vw - 100%));
+    background-color: #000010;
+    color: #ffffff;
+}
+.wrapper{
+    width: calc(100vw - 10vmin);
+    margin: 0 auto;
+    font-size: 2.8vmin;
+    font-family: "Rubik",sans-serif;
+}
+section{
+    display: none;
+}
+#section-1{
+    display: block;
+}
+h1,h4,h6{
+    font-weight: 600;
+}
+h1{
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+h1 span{
+    display: block;
+    color: #FFB31F;
+    font-size: 2.5em;
+}
+h4{
+    position: relative;
+    display: inline-block;
+    background-color: #FFB31F;
+    padding: 5px 20px;
+    font-size: 1.3em;
+}
+h4:before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: #FFB31F;
+    z-index: -1;
+    top: 0;
+    right: -10px;
+    -webkit-transform: skew(20deg);
+        -ms-transform: skew(20deg);
+            transform: skew(20deg);
+}
+.line{
+    height: 2px;
+    background-color: #FFB31F;
+}
+h6{
+    font-size: 1.4em;
+    margin: 20px 0;
+}
+p{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.code-container{
+    position: relative;
+}
+.copy-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    border: none;
+    padding: 2px 5px;
+    font-size: 1em;
+    opacity: 0.3;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.copy-btn:hover{
+    opacity: 1;
+}
+code{
+    font-family: 'Source Code Pro', monospace;
+    display: block;
+    width: 100%;
+    font-weight: 900;
+    font-size: 0.3em;
+    line-height: 3.8em;
+    position: centre;
+}
+.btn-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 30px 0 20px 0;
+}
+.btn-wrapper button{
+    font-family: "Rubik",sans-serif;
+    background-color: #f5f5f5;
+    border: none;
+    font-size: 1.7em;
+    padding: 0.4em 1em;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #000010;
+    cursor: pointer;
+}
+a{
+    display: block;
+    background-color: #FFB31F;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 0;
+    margin-bottom: 50px;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #000000;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>
+            <span>KABIR ARYA</span>
+            
+        </h1>
+        <!-- Filter -->              
+        <section id="section-1">
+            <h4>Dictionary</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) pydictionary<br>(2.) Tkinter<br>(3.) Pillow</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-1')">Copy</button>
+                <pre id="snippet-1"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+root=Tk()
+root.title("Dictionary")
+root.geometry("509x509")
+root.configure(bg="white")
+font_area=Font(family="Aharoni",size="40",weight="bold")
+font_area1=Font(family="Bradley Hand ITC",size="15",weight="bold")
+Label(root,text="Dictionary",fg="black",bg="white",font=font_area).pack()
+Label(root,text="Enter word :-",bg="white",font=font_area1).place(x=5,y=80)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+data=StringVar()
+def search():
+    from PyDictionary import PyDictionary
+    dict=PyDictionary()
+    meaning=dict.meaning(data.get())
+
+    Label(root, text=meaning, bg="white", fg="black", font=font_area1).place(x=00, y=150)
+
+
+Entry(root,textvariable=data,bg="lightgreen",width=45).place(x=120,y=80,height=32)
+img11 = ImageTk.PhotoImage(Image.open("seo.png"))
+labe1l = Button(root, image=img11,command=search,relief=FLAT).place(x=400, y=72)
+root.mainloop()
+    console.log(filteredNums);
+                </code></pre>
+            </div>
+            <h6>Output:</h6>
+            <center>
+    <img src='https://i.ibb.co/DkHhw7q/dict.png' height='200' width='200'>
+            
+        </center></section>      <!-- Map -->
+        <section id="section-2">
+            <h4>QR Code</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) pycode</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-2')">Copy</button>
+                <pre id="snippet-2"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+
+root=Tk()
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+root.title("QR-code Genrator ")
+root.configure(bg="white")
+root.geometry("500x600")
+font_area1=Font(family="Bradley Hand ITC",size="15",weight="bold")
+font_area=Font(family="Aharoni",size="30",weight="bold")
+dataqw=StringVar()
+Label(root,text="QR Code Genrator",bg="white",font=font_area).pack()
+Label(root,text="Enter Subject:-",font=font_area1,bg="White").place(x=0,y=70)
+Entry(root,textvariable=dataqw,bg="lightgreen",width=45).place(x=145,y=70,height=25)
+var=IntVar()
+Label(root,text="Watemark",bg="white",font=font_area1).place(x=0,y=120)
+Checkbutton(root,text="Text",variable=var,bg="white",fg="black",font=font_area1)
+.place(x=140,y=120)
+Checkbutton(root,text="Image",variable=var,bg="white",fg="black",font=font_area1)
+.place(x=250,y=120)
+def genrate():
+    import qrcode
+    from PIL import Image, ImageDraw, ImageFont
+    qr = qrcode.QRCode(
+        version=1,
+        box_size=10,
+        border=5
+
+    )
+
+    data = dataqw.get()
+    qr.add_data(data)
+    qr.make(fit=True)
+    img = qr.make_image(fill="white", back_color="darkorange")
+    img.save('0.png')
+    # coding for text  watermark---------
+    img1 = Image.open('0.png')
+    width, heigth = img1.size
+    draw = ImageDraw.Draw(img1)
+    text = "Ayush Arya"
+    font = ImageFont.truetype('arial.ttf', 30)
+    textwidth, textheigth = draw.textsize(text, font)
+    margin = 10
+    x = width - textwidth - margin
+    y = heigth - textheigth - margin
+    draw.text((x, y), text, font=font)
+    img1.save("0.png")
+    # adding our logo ...
+    face = Image.open('ayushlogo.png')
+
+    pos = ((img1.size[0] - face.size[0]) // 2, (img1.size[1] - face.size[1]) // 2)
+
+    img1.paste(face, pos)
+    img1.save('0.png')
+
+img1 = ImageTk.PhotoImage(Image.open("solution.png"))
+label=Button(root,image=img1,command=genrate).place(x=110,y=540)
+img11 = ImageTk.PhotoImage(Image.open("0.png"))
+labe1l = Button(root, image=img11).place(x=70, y=160)
+img12 = ImageTk.PhotoImage(Image.open("718323.png"))
+label2=Button(root,image=img12,command=quit).place(x=280,y=540)
+#Label(root,text="@Kabir Arya",bg="white",fg="black",font=font_area1).place(x=180,y=570)
+root.mainloop()
+
+
+                </code></pre>
+            </div>
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/kh1cwSx/qr.png' height='200' width='200'></center></pre>
+        </section>
+
+        <!-- Sort -->
+        <section id="section-3">
+            <h4>Image Editor</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-3')">Copy</button>
+                <pre id="snippet-3"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from tkinter import *
+from tkinter import ttk
+from tkinter import filedialog
+from tkinter.filedialog import askopenfilename, asksaveasfilename
+from PIL import Image, ImageTk, ImageFilter, ImageEnhance, ImageOps
+import os
+from tkinter import ttk
+from PIL import Image,ImageTk
+root=Tk()
+root.geometry("700x670")
+root.configure(bg="white")
+root.resizable(0,0)
+root.title("Image Editior")
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+img134 = ImageTk.PhotoImage(Image.open("2496846.png"))
+Label(root,image=img134,relief=FLAT,border=0).place(x=185,y=20)
+
+# create functions
+def selected():
+    global img_path, img
+    img_path = filedialog.askopenfilename(initialdir=os.getcwd())
+    img = Image.open(img_path)
+    img.thumbnail((350, 350))
+    # imgg = img.filter(ImageFilter.BoxBlur(0))
+    img1 = ImageTk.PhotoImage(img)
+    canvas2.create_image(300, 140, image=img1)
+    canvas2.image = img1
+
+
+def blur(event):
+    global img_path, img1, imgg
+    for m in range(0, v1.get() + 1):
+        img = Image.open(img_path)
+        img.thumbnail((350, 350))
+        imgg = img.filter(ImageFilter.BoxBlur(m))
+        img1 = ImageTk.PhotoImage(imgg)
+        canvas2.create_image(300, 140, image=img1)
+        canvas2.image = img1
+
+
+def brightness(event):
+    global img_path, img2, img3
+    for m in range(0, v2.get() + 1):
+        img = Image.open(img_path)
+        img.thumbnail((350, 350))
+        imgg = ImageEnhance.Brightness(img)
+        img2 = imgg.enhance(m)
+        img3 = ImageTk.PhotoImage(img2)
+        canvas2.create_image(300, 140, image=img3)
+        canvas2.image = img3
+
+
+def contrast(event):
+    global img_path, img4, img5
+    for m in range(0, v3.get() + 1):
+        img = Image.open(img_path)
+        img.thumbnail((350, 350))
+        imgg = ImageEnhance.Contrast(img)
+        img4 = imgg.enhance(m)
+        img5 = ImageTk.PhotoImage(img4)
+        canvas2.create_image(300, 140, image=img5)
+        canvas2.image = img5
+
+
+def rotate_image(event):
+    global img_path, img6, img7
+    img = Image.open(img_path)
+    img.thumbnail((350, 350))
+    img6 = img.rotate(int(rotate_combo.get()))
+    img7 = ImageTk.PhotoImage(img6)
+    canvas2.create_image(300, 140, image=img7)
+    canvas2.image = img7
+
+
+def flip_image(event):
+    global img_path, img8, img9
+    img = Image.open(img_path)
+    img.thumbnail((350, 350))
+    if flip_combo.get() == "FLIP LEFT TO RIGHT":
+        img8 = img.transpose(Image.FLIP_LEFT_RIGHT)
+    elif flip_combo.get() == "FLIP TOP TO BOTTOM":
+        img8 = img.transpose(Image.FLIP_TOP_BOTTOM)
+    img9 = ImageTk.PhotoImage(img8)
+    canvas2.create_image(300, 140, image=img9)
+    canvas2.image = img9
+
+
+
+def image_border(event):
+    global img_path, img10, img11
+    img = Image.open(img_path)
+    img.thumbnail((350, 350))
+    img10 = ImageOps.expand(img, border=int(border_combo.get()), fill=95)
+    img11 = ImageTk.PhotoImage(img10)
+    canvas2.create_image(300, 140, image=img11)
+    canvas2.image = img11
+
+
+img1 = None
+img3 = None
+img5 = None
+img7 = None
+img9 = None
+img11 = None
+
+
+def save():
+    global img_path, imgg, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, 
+    img11
+    # file=None
+    ext = img_path.split(".")[-1]
+    file = asksaveasfilename(defaultextension=f".{ext}",
+                             filetypes=[("All Files", "*.*"), ("PNG file", "*.png")
+                             , ("jpg file", "*.jpg")])
+    if file:
+        if canvas2.image == img1:
+            imgg.save(file)
+        elif canvas2.image == img3:
+            img2.save(file)
+        elif canvas2.image == img5:
+            img4.save(file)
+        elif canvas2.image == img7:
+            img6.save(file)
+        elif canvas2.image == img9:
+            img8.save(file)
+        elif canvas2.image == img11:
+            img10.save(file)
+        # create labels, scales and comboboxes
+
+
+canvas2 = Canvas(root, width="550", height="320", relief=RIDGE, bd=2,bg="white",border=1)
+canvas2.place(x=70, y=100)
+img2we = ImageTk.PhotoImage(Image.open("3594969.png"))
+Label(root,image=img2we,relief=FLAT,border=0).place(x=20,y=440)
+v1 = IntVar()
+scale1 = ttk.Scale(root, from_=0, to=10, variable=v1, orient=HORIZONTAL,command=blur)
+scale1.place(x=200, y=443)
+#brightness
+img3b = ImageTk.PhotoImage(Image.open("1076582.png"))
+Label(root,image=img3b,relief=FLAT,border=0).place(x=20,y=500)
+v2 = IntVar()
+scale1 = ttk.Scale(root, from_=0, to=10, variable=v2, orient=HORIZONTAL,command=brightness)
+scale1.place(x=200, y=500)
+
+#cntrast
+img4c = ImageTk.PhotoImage(Image.open("587352.png"))
+Label(root,image=img4c,relief=FLAT,border=0).place(x=20,y=550)
+v3 = IntVar()
+scale1 = ttk.Scale(root, from_=0, to=10, variable=v3, orient=HORIZONTAL,command=contrast)
+scale1.place(x=200, y=560)
+
+#rotate
+img5r = ImageTk.PhotoImage(Image.open("1330172.png"))
+Label(root,image=img5r,relief=FLAT,border=0).place(x=385,y=440)
+
+
+values = [0, 90, 180, 270, 360]
+rotate_combo = ttk.Combobox(root, values=values, font=('ariel 10 bold'))
+rotate_combo.place(x=520, y=443)
+rotate_combo.bind("<<ComboboxSelected>>", rotate_image)
+
+#flip
+img6f = ImageTk.PhotoImage(Image.open("734592.png"))
+Label(root,image=img6f,relief=FLAT,border=0).place(x=385,y=500)
+values1 = ["FLIP LEFT TO RIGHT", "FLIP TOP TO BOTTOM"]
+flip_combo = ttk.Combobox(root, values=values1, font=('ariel 10 bold'))
+flip_combo.place(x=520, y=500)
+flip_combo.bind("<<ComboboxSelected>>", flip_image)
+
+
+#border
+img7br = ImageTk.PhotoImage(Image.open("16288-1.png"))
+Label(root,image=img7br,relief=FLAT,border=0).place(x=385,y=550)
+values2 = [i for i in range(10, 45, 5)]
+border_combo = ttk.Combobox(root, values=values2, font=("ariel 10 bold"))
+border_combo.place(x=520, y=550)
+border_combo.bind("<<ComboboxSelected>>", image_border)
+
+
+img121 = ImageTk.PhotoImage(Image.open("4814764.png"))
+Button(root,image=img121,border=1,command=selected).place(x=20,y=620)
+img12 = ImageTk.PhotoImage(Image.open("892634.png"))
+Button(root,image=img12,border=1,command=save).place(x=300,y=620)
+img13 = ImageTk.PhotoImage(Image.open("3596144.png"))
+Button(root,image=img13,border=1,command=root.destroy).place(x=520,y=620)
+
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/WP7rZxx/image-editior.png' height='200' width='200'></center></pre>
+        </section>
+
+        <!-- Reduce -->
+        <section id="section-4">
+            <h4>Youtube Downloader</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Pafy<br>(2.) Tkinter<br>(3.) Pillow<br>(4.) Tkhtmlview</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-4')">Copy</button>
+                <pre id="snippet-4"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import Image, ImageTk
+
+root = Tk()
+root.title("YouTube Downloader")
+root.geometry("500x600")
+photo = PhotoImage(file="ayushlogo.png")
+root.iconphoto(False, photo)
+root.configure(bg="white")
+root.resizable(0, 0)
+font_area1 = Font(family="Comic Sans MS", size="13")
+font_area12 = Font(family="Bell MT", size="25", weight="bold")
+font_area10 = Font(family="Bell MT", size="13", weight="bold")
+
+img12 = ImageTk.PhotoImage(Image.open("1384060.png"))
+label = Label(root, image=img12, relief=FLAT, border=0).pack()
+Label(root, text="YouTube", font=font_area12, bg="white").place(x=70, y=20)
+Label(root, text="Downloader", font=font_area12, bg="white").place(x=285, y=20)
+data = StringVar()
+Entry(root, textvariable=data, relief=FLAT, border=0, width=60, bg="lightgreen")
+.place(x=5, y=150, height=33)
+
+
+# Label(root,text="Downloader",font=font_area12,bg="white",fg="red")
+.place(x=200,y=60)
+# https://m.youtube.com/watch?v=9S8F-yHloTA
+def search():
+    import pafy
+    from tkhtmlview import HTMLLabel
+    video = pafy.new(data.get())
+    p = video.thumb
+
+    HTMLLabel(root, html=f"""<img src='{p}'height=200',width=150>""", width=90, bg="white", fg="white")
+    .place(x=375,y=353,height=90)       
+    Label(root, text=f"{video.title}", font=font_area10, bg="white")
+    .place(x=120, y=252)
+    Label(root, text=f"{video.viewcount}", font=font_area10, bg="white")
+    .place(x=120, y=302)
+    Label(root, text=f"{video.duration} ", font=font_area10, bg="white")
+    .place(x=120, y=352)
+    Label(root, text=f"{video.rating}", font=font_area10, bg="white")
+    .place(x=120, y=400)
+
+    Label(root, text=f"{video.author}", font=font_area10, bg="white")
+    .place(x=180, y=452)
+    Label(root, text=f"{video.likes}", bg="white", fg="green", font=font_area10)
+    .place(x=265, y=288)
+    Label(root, text=f"{video.dislikes}", bg="white", fg="red", font=font_area10)
+    .place(x=390, y=288)
+
+    best = video.getbest()
+    Label(root, text=f"{best.resolution}", bg="white", font=font_area10)
+    .place(x=150, y=500)
+
+
+audio = IntVar()
+video = IntVar()
+im1audio = ImageTk.PhotoImage(Image.open("2904752.png"))
+im1video = ImageTk.PhotoImage(Image.open("3074767.png"))
+Checkbutton(root, image=im1audio, variable=audio, bg="white", fg="white")
+.place(x=100, y=200)
+Checkbutton(root, image=im1video, variable=video, bg="white", fg="white")
+.place(x=240, y=200)
+
+
+def download():
+    if (audio.get()):
+        import pafy
+        bestaudio = video.getbestaudio()
+        bestaudio.download()
+    elif (video.get()):
+        import pafy
+        bestvideo = video.getbest()
+        bestvideo.download()
+    else:
+        from tkinter import messagebox
+        messagebox.showerror("Error", "Please Select one option either audio or video")
+
+
+down = ImageTk.PhotoImage(Image.open("4253261.png"))
+image2 = ImageTk.PhotoImage(Image.open("seo.png"))
+Button(root, image=image2, relief=FLAT, command=search)
+.place(x=380, y=143)
+# Label(root,image=down,relief=FLAT,border=0)
+.place(x=280,y=83)
+im1view = ImageTk.PhotoImage(Image.open("159604.png"))
+im1length = ImageTk.PhotoImage(Image.open("84180.png"))
+im1discription = ImageTk.PhotoImage(Image.open("1828961.png"))
+im1title = ImageTk.PhotoImage(Image.open("2799932.png"))
+im1like = ImageTk.PhotoImage(Image.open("633991.png"))
+im1dislike = ImageTk.PhotoImage(Image.open("633990.png"))
+
+im1resolution = ImageTk.PhotoImage(Image.open("1246698.png"))
+im1channel = ImageTk.PhotoImage(Image.open("1969991.png"))
+Label(root, image=im1title, relief=FLAT, border=0)
+.place(x=20, y=250)
+Label(root, text="Title : ", bg="white", font=font_area1)
+.place(x=52, y=250)
+Label(root, image=im1view, relief=FLAT, border=0)
+.place(x=20, y=300)
+Label(root, text="View : ", bg="white", font=font_area1)
+.place(x=52, y=300)
+Label(root, image=im1length, relief=FLAT, border=0)
+.place(x=20, y=350)
+Label(root, text="Length : ", bg="white", font=font_area1)
+.place(x=52, y=350)
+Label(root, image=im1discription, relief=FLAT, border=0)
+.place(x=20, y=400)
+Label(root, text="Rating : ", bg="white", font=font_area1)
+.place(x=52, y=400)
+Label(root, image=im1channel, relief=FLAT, border=0)
+.place(x=20, y=450)
+Label(root, text="Channel Name : ", bg="white", font=font_area1)
+.place(x=52, y=450)
+Label(root, image=im1resolution, relief=FLAT, border=0)
+.place(x=20, y=500)
+Label(root, text="Resolution : ", bg="white", font=font_area1)
+.place(x=52, y=500)
+Label(root, image=im1like, relief=FLAT, border=0)
+.place(x=220, y=288)
+# Label(root,text="Like : ",bg="white",font=font_area1)
+.place(x=240,y=288)
+Label(root, image=im1dislike, relief=FLAT, border=0)
+.place(x=350, y=295)
+# Label(root,text="Dislike : ",bg="white",font=font_area1)
+.place(x=370,y=288)
+
+im1button = ImageTk.PhotoImage(Image.open("4253261.png"))
+Button(root, image=im1button, command=download)
+.place(x=150, y=550)
+Label(root, text="@Kabir Arya", font=font_area1, bg="white").place(x=350, y=555)
+
+root.mainloop()
+# dd
+                </code></pre>
+            </div>
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/wW6y7kH/IMG-20210616-182502.png' height='200' width='200'></center></pre>
+        </section>
+        
+       <section id="section-5">
+            <h4>Ludo UI</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-5')">Copy</button>
+                <pre id="snippet-5"><code class="snippets">
+from tkinter import *
+from tkvideo import tkvideo
+from tkinter.font import Font
+from PIL import Image,ImageTk
+root=Tk()
+root.configure(bg="white")
+root.geometry("500x600")
+root.title("LUDO \t\t@Kabir-Arya")
+root.resizable(0,0)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area1=Font(family="Bell MT",size="43")
+font_area12=Font(family="Bell MT",size="40",weight="bold")
+Label(root,text="LUDO ",bg="white",font=font_area12).place(x=130,y=10)
+img1 = ImageTk.PhotoImage(Image.open("2228381.png"))
+label=Label(root,image=img1,relief=FLAT,border=0).place(x=300,y=10)
+
+img12 = ImageTk.PhotoImage(Image.open("interesting-board-game-everyone-high-quality-
+vector-format-ludo-game-vector-illustration-design-168221081.jpg"))
+label=Label(root,image=img12,relief=FLAT,border=0).place(x=50,y=90)
+lol=Label(root,font=font_area1,bg="white")
+def roll():
+    import random
+    dice=['\u2680','\u2681','\u2682','\u2683','\u2684','\u2685']
+    lol.config(text=f"{random.choice(dice)}{random.choice(dice)}")
+    lol.place(x=210,y=509)
+b1=Button(root,text="ROll",command=roll,bg="white",border=0).place(x=230,y=575)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/XDZNw27/IMG-20210610-183915.png' height='200' width='200'></center></pre>
+        </section>
+ 
+<section id="section-6">
+            <h4>Url Info</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) Ip2geotool</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-6')">Copy</button>
+                <pre id="snippet-6"><code class="snippets">
+from tkinter import *
+
+from tkinter.font import Font
+from PIL import Image,ImageTk
+
+
+import socket
+from ip2geotools.databases.noncommercial import DbIpCity
+root=Tk()
+root.title("URL INFORMATION")
+root.geometry("500x500")
+photo = PhotoImage(file="ayushlogo.png")
+root.iconphoto(False, photo)
+root.configure(bg="white")
+root.resizable(0, 0)
+font_area1 = Font(family="Comic Sans MS", size="30",weight="bold")
+font_area12 = Font(family="Bell MT", size="15", weight="bold")
+font_area10 = Font(family="Bell MT", size="13", weight="bold")
+Data=StringVar()
+def go():
+    url = Data.get()
+
+    ip = socket.gethostbyname(url)
+    respnse = DbIpCity.get(ip, api_key='free')
+    print("IP : ", ip)
+    Label(root,text=ip,font=font_area12,bg="white").place(x=150,y=200)
+
+    print("City", respnse.city)
+    Label(root,text=f"{respnse.city}",font=font_area12,bg="white").place(x=150,y=250)
+    print("Region", respnse.region)
+    Label(root,text=f"{respnse.region}",font=font_area12,bg="white").place(x=150,y=300)
+    print("Country", respnse.country)
+    Label(root,text=f"{respnse.country}",font=font_area12,bg="white").place(x=150,y=350)
+Label(root,text="URL",bg="white",font=font_area1).place(x=98,y=10)
+Label(root,text="INFO",bg="white",font=font_area1).place(x=320,y=10)
+img12 = ImageTk.PhotoImage(Image.open("3165554.png"))
+label = Label(root, image=img12, relief=FLAT, border=0).pack()
+Entry(root,textvariable=Data,bg="lightgreen",relief=FLAT,width=60)
+.place(x=10,y=130,height=30)
+img12button = ImageTk.PhotoImage(Image.open("seo.png"))
+Button(root, image=img12button, relief=FLAT, border=2,command=go).place(x=390,y=120)
+img12ip = ImageTk.PhotoImage(Image.open("2165019.png"))
+img12city = ImageTk.PhotoImage(Image.open("1719653.png"))
+img12region = ImageTk.PhotoImage(Image.open("2534901.png"))
+
+img12country = ImageTk.PhotoImage(Image.open("3085929.png"))
+Label(root, image=img12ip, relief=FLAT, border=0).place(x=10,y=200)
+Label(root, image=img12city, relief=FLAT, border=0).place(x=10,y=250)
+Label(root, image=img12region, relief=FLAT, border=0).place(x=10,y=300)
+Label(root, image=img12country, relief=FLAT, border=0).place(x=10,y=350)
+Label(root,text="@Kabir Arya",fg="black",relief=FLAT,bg="white",
+activebackground="white",font=font_area12).place(x=170,y=420)
+img1235 = ImageTk.PhotoImage(Image.open("1384031.png"))
+Button(root,image=img1235,fg="black",border=2,relief=FLAT,
+bg="white",activebackground="white").place(x=150,y=450)
+
+#Discord
+
+img12356 = ImageTk.PhotoImage(Image.open("2111363.png"))
+Button(root,image=img12356,fg="black",border=2,relief=FLAT,bg="white",
+activebackground="white").place(x=190,y=450)
+#github
+img123567 = ImageTk.PhotoImage(Image.open("733609.png"))
+Button(root,image=img123567,fg="black",border=2,relief=FLAT,bg="white",
+activebackground="white").place(x=230,y=450)
+
+#telegram
+img1235678 = ImageTk.PhotoImage(Image.open("152827.png"))
+Button(root,image=img1235678,fg="black",border=2,relief=FLAT,bg="white",
+activebackground="white").place(x=270,y=450)
+
+root.mainloop()
+
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/HKQDbvn/IMG-20210626-095701.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-7">
+            <h4>Car Info</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) Vininfo</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-7')">Copy</button>
+                <pre id="snippet-7"><code class="snippets">
+from tkinter import *
+from  PIL import Image, ImageTk
+from tkinter.font import Font
+root=Tk()
+root.geometry("500x685")
+root.title("Car Info")
+
+root.configure(bg="white")
+root.resizable(0,0)
+photo = PhotoImage(file="ayushlogo.png")
+root.iconphoto(False, photo)
+font_area1 = Font(family="Comic Sans MS", size="13")
+font_area12 = Font(family="Bell MT", size="50", weight="bold")
+font_area10 = Font(family="Bell MT", size="13", weight="bold")
+
+img12 = ImageTk.PhotoImage(Image.open("3774278.png"))
+label = Label(root, image=img12, relief=FLAT, border=0).pack()
+Label(root,text="CAR",font=font_area12,bg="white",relief=FLAT).place(x=20,y=10)
+Label(root,text="INFO",font=font_area12,bg="white",relief=FLAT).place(x=320,y=10)
+img12region = ImageTk.PhotoImage(Image.open("2534901.png"))
+img12year = ImageTk.PhotoImage(Image.open("1355110.png"))
+img12engine = ImageTk.PhotoImage(Image.open("560632.png"))
+img12country = ImageTk.PhotoImage(Image.open("3085929.png"))
+img12model = ImageTk.PhotoImage(Image.open("3124850.png"))
+img12transmission = ImageTk.PhotoImage(Image.open("4662008.png"))
+img12status = ImageTk.PhotoImage(Image.open("3967237.png"))
+img12body = ImageTk.PhotoImage(Image.open("4805866.png"))
+img12manfuc = ImageTk.PhotoImage(Image.open("2942760.png"))
+img12plant = ImageTk.PhotoImage(Image.open("4946831.png"))
+img12serial = ImageTk.PhotoImage(Image.open("3050174.png"))
+def check():
+    from vininfo import Vin
+    vin=Vin(data.get())
+    Label(root,text=f"{vin.country}",font=font_area1,bg="white").place(x=300,y=250)
+    Label(root,text=f"{vin.manufacturer}",font=font_area1,bg="white").place(x=300,y=300)
+    Label(root,text=f"{vin.region}",font=font_area1,bg="white").place(x=300,y=350)
+    Label(root,text=f"{vin.wmi}",font=font_area1,bg="white").place(x=300,y=400)
+    Label(root,text=f"{vin.vds}",font=font_area1,bg="white").place(x=300,y=450)
+
+    Label(root,text=f"{vin.vis}",font=font_area1,bg="white").place(x=300,y=500)
+    Label(root,text=f"{vin.years}",font=font_area1,bg="white").place(x=300,y=550)
+    Label(root,text=f"{vin.annotate()}",font=font_area1,bg="white").place(x=300,y=600)
+    print(vin.annotate())
+    Label(root,text=f"{vin.details}",font=font_area1,bg="white").place(x=300,y=650)
+    Label(root,text=f"Sucess",font=font_area1,bg="white",fg="green").place(x=300,y=200)
+
+    
+data=StringVar()
+Entry(root,textvariable=data,relief=FLAT,bg="lightgreen",width=60)
+.place(x=20,y=130,height=30)
+img12button=ImageTk.PhotoImage(Image.open("seo.png"))
+Button(root, image=img12button, relief=FLAT, border=0,command=check).place(x=390,y=124)
+Label(root, image=img12status, relief=FLAT, border=0).place(x=50,y=200)
+Label(root, image=img12country, relief=FLAT, border=0).place(x=50,y=250)
+Label(root, image=img12manfuc, relief=FLAT, border=0).place(x=50,y=300)
+Label(root, image=img12region, relief=FLAT, border=0).place(x=50,y=350)
+Label(root, image=img12model, relief=FLAT, border=0).place(x=50,y=400)
+Label(root, image=img12plant, relief=FLAT, border=0).place(x=50,y=450)
+Label(root, image=img12serial, relief=FLAT, border=0).place(x=50,y=500)
+Label(root, image=img12year, relief=FLAT, border=0).place(x=50,y=550)
+Label(root, image=img12body, relief=FLAT, border=0).place(x=50,y=650)
+Label(root, image=img12engine, relief=FLAT, border=0).place(x=50,y=600)
+Label(root, image=img12transmission, relief=FLAT, border=0).place(x=50,y=700)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/WBKKWPk/IMG-20210624-220254.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-8">
+            <h4>Covid Tracker</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) Covid</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-8')">Copy</button>
+                <pre id="snippet-8"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import Image ,ImageTk
+
+
+root=Tk()
+root.title("Covid Tracker ")
+root.geometry("500x500")
+root.resizable(0,0)
+root.configure(bg="white")
+font_area1=Font(family="Bell MT",size="13")
+font_area12=Font(family="Bell MT",size="20")
+
+img1 = ImageTk.PhotoImage(Image.open("2913604.png"))
+label=Label(root,image=img1,relief=FLAT,border=0).place(x=70,y=20)
+country=StringVar()
+Entry(root,textvariable=country,width=60,bg="lightgreen",relief=FLAT)
+.place(x=5,y=120,height=35)
+def covid():
+    from covid import Covid
+    covid=Covid()
+    cases=covid.get_status_by_country_name(country.get())
+    for x in cases:
+        Label(root,text=f"{cases['country']}",bg="white",font=font_area12)
+        .place(x=195,y=205)
+        Label(root, text=f"{cases['active']}", bg="white", font=font_area12)
+        .place(x=195, y=250)
+        Label(root, text=f"{cases['deaths']}", bg="white", font=font_area12)
+        .place(x=195, y=295)
+        Label(root, text=f"{cases['recovered']}", bg="white", font=font_area12)
+        .place(x=195, y=340)
+        #print(x,":",cases[x])
+
+img11 = ImageTk.PhotoImage(Image.open("seo.png"))
+Button(root,image=img11,command=covid,relief=FLAT,border=0)
+.place(x=380,y=115)
+from covid import Covid
+covd=Covid()
+
+Label(root,text=f"Recoverd :- {covd.get_total_active_cases()}        
+Active :- {covd.get_total_active_cases()}\tDeath :- {covd.get_total_deaths()}",
+bg="white",font=font_area1).place(x=0,y=90)
+imgcountry = ImageTk.PhotoImage(Image.open("129548-1.png"))
+Label(root,image=imgcountry,border=0).place(x=5,y=205)
+
+imgactive = ImageTk.PhotoImage(Image.open("2833457.png"))
+Label(root,image=imgactive,border=0).place(x=5,y=250)
+
+imgdeaths = ImageTk.PhotoImage(Image.open("3455284.png"))
+Label(root,image=imgdeaths,border=0).place(x=5,y=295)
+
+imgrecovered = ImageTk.PhotoImage(Image.open("3663544.png"))
+Label(root,image=imgrecovered,border=0).place(x=5,y=340)
+def covid_data():
+    # importing matplotlib which will be used to show data graphically
+    from matplotlib import pyplot as plt
+    # to scale the data we are importing patches
+    import matplotlib.patches as mpatches
+    # importing covid library
+    from covid import Covid
+    # initializing covid library
+    covid = Covid()
+    # this declares empty lists to store different data sets
+    cases = []
+    confirmed = []
+    active = []
+    deaths = []
+    recovered = []
+       # using Exception Handling to handle the exceptions.
+    try:
+        # updating root(tkinter window)
+        root.update()
+        # getting countries names entered by the user using get() method.
+        countries = country.get()
+        # removing white spaces from the start and end of the string
+        country_names = countries.strip()
+        # replacing white spaces with commas inside the string
+        country_names = country_names.replace(" ", ",")
+        # splitting the string to store names of countries
+        # as a list
+        country_names = country_names.split(",")
+        # for loop to get all countries data
+        for x in country_names:
+            # appending countries data one-by-one in cases list
+            # here, the data will be stored as a dictionary
+            # for one country i.e. for each country
+            # there will be one dictionary in the list
+            # which will contain the whole information
+            # of that country
+            cases.append(covid.get_status_by_country_name(x))
+            # updating the root
+            root.update()
+        # for loop to get one country data stored as dict in list cases
+        for y in cases:
+            # storing every Country's confirmed cases in the confirmed list
+            confirmed.append(y["confirmed"])
+            # storing every Country's active cases in the active list
+            active.append(y["active"])
+            # storing every Country's deaths cases in the deaths list
+            deaths.append(y["deaths"])
+            # storing every Country's recovered cases in the recovered list
+            recovered.append(y["recovered"])
+        # marking the color information on scaleusing patches
+        confirmed_patch = mpatches.Patch(color='blue', label='Confirmed')
+        recovered_patch = mpatches.Patch(color='green', label='Recovered')
+        active_patch = mpatches.Patch(color='red', label='Active')
+        deaths_patch = mpatches.Patch(color='orange', label='Deaths')
+        # plotting the scale on graph using legend()
+        plt.legend(handles=[confirmed_patch, recovered_patch, active_patch, deaths_patch])
+        # showing the data using graphs
+        for x in range(len(country_names)):
+            plt.bar(country_names[x], confirmed[x], color='blue')
+            if recovered[x] > active[x]:
+                plt.bar(country_names[x], recovered[x], color='green')
+                plt.bar(country_names[x], active[x], color='red')
+            else:
+                plt.bar(country_names[x], active[x], color='red')
+                plt.bar(country_names[x], recovered[x], color='green')
+            plt.bar(country_names[x], deaths[x], color='orange')
+        # setting the title of the graph
+        plt.title('CURRENT COVID CASES')
+        # giving label to x direction of graph
+        plt.xlabel('COUNTRY NAME')
+        # giving label to y direction of graph
+        plt.ylabel('CASES(in millions)')
+        # showing the full graph
+        plt.show()
+    except Exception as e:
+        # the user must enter the correct details during entering the country names
+        # otherwise, they will enter into this section
+        # so ask them to diffrentiate the names using comma or space but not both.
+
+        country.set("Enter the correct details please:")
+
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+imggraph = ImageTk.PhotoImage(Image.open("3800720.png"))
+
+Button(root,text="Show on Map",image=imggraph,command=covid_data,relief=FLAT,border=0)
+.place(x=25,y=420)
+def show_in_map():
+    from covid import Covid
+    from geopy.geocoders import Nominatim
+    from geopy import distance
+    import folium
+
+    geocoder = Nominatim(user_agent="Kabir_Arya")
+    import folium
+    covid=Covid()
+    cases=covid.get_status_by_country_name(country.get())
+    app = Nominatim(user_agent="tutorial")
+    for x in cases:
+        locations = app.geocode(country.get())
+        ma = folium.Map(locations[1], zoom_start=12)
+        folium.Marker(locations[1],popup=f"Country Name{cases['country']}\nConfirmed cases
+ {cases['confirmed']}\n Active Case 
+ 
+{cases['active']}\nDeath {cases['deaths']}\nRecovered 
+{cases['recovered']}").add_to(ma)
+        ma.save(f"{country.get()}.html")
+
+
+
+
+imgmap = ImageTk.PhotoImage(Image.open("854878.png"))
+
+Button(root,text="Show on Map",image=imgmap,command=show_in_map,relief=FLAT,border=0)
+.place(x=260,y=420)
+
+
+
+
+
+
+
+
+
+root.mainloop()
+
+
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/jT5z7sq/covid09.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-9">
+            <h4>Screen Recorder</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) Opencv</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-9')">Copy</button>
+                <pre id="snippet-9"><code class="snippets">
+    from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+root=Tk()
+def start():
+    import pyautogui
+
+    import cv2
+
+    import numpy as np
+
+    # Specify resolution
+
+    resolution = (1920, 1080)
+
+    # Specify video codec
+
+    codec = cv2.VideoWriter_fourcc(*"XVID")
+
+    # Specify name of Output file
+
+    filename = "Recording.avi"
+
+    # Specify frames rate. We can choose any
+    # value and experiment with it
+
+    fps = 60.0
+
+    # Creating a VideoWriter object
+
+    out = cv2.VideoWriter(filename, codec, fps, resolution)
+
+    # Create an Empty window
+
+    cv2.namedWindow("Live", cv2.WINDOW_NORMAL)
+
+    # Resize this window
+
+    cv2.resizeWindow("Live", 450, 220)
+
+    while True:
+
+        # Take screenshot using PyAutoGUI
+
+        img = pyautogui.screenshot()
+
+        # Convert the screenshot to a numpy array
+
+        frame = np.array(img)
+
+        # Convert it from BGR(Blue, Green, Red) to
+
+        # RGB(Red, Green, Blue)
+
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+        # Write it to the output file
+
+        out.write(frame)
+
+        # Optional: Display the recording screen
+
+        cv2.imshow('Live', frame)
+
+
+        # Stop recording when we press 'q'
+
+        if cv2.waitKey(1) == ord('q'):
+            break
+
+    # Release the Video writer
+    out.release()
+
+    # Destroy all windows
+    cv2.destroyAllWindows()
+
+def arya():
+    print("@Kabir Arya")
+    print("Don't Try to copy")
+font_area1=Font(family="Bell MT",size="13",weight="bold")
+root.configure(bg="white")
+root.geometry("500x500")
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+
+root.title("Screen Recoder")
+root.resizable(0,0)
+img1322 = ImageTk.PhotoImage(Image.open("3039386.png"))
+Label(root,image=img1322,fg="black",font=font_area1,relief=FLAT,bg="white",
+activebackground="white").pack()
+canvas2 = Canvas(root, width="450", height="220", relief=RIDGE, bd=2,bg="white",border=1)
+canvas2.place(x=20, y=100)
+
+img1 = ImageTk.PhotoImage(Image.open("840513.png"))
+Button(root,image=img1,fg="black",font=font_area1,border=2,relief=FLAT,bg="white",
+activebackground="lightgreen",command=start).place(x=20,y=380)
+img12 = ImageTk.PhotoImage(Image.open("394592.png"))
+Button(root,image=img12,fg="black",font=font_area1,border=2,relief=FLAT,bg="white",
+activebackground="red",command=root.destroy).place(x=370,y=380)
+
+#logo
+Label(root,text="@Kabir Arya",fg="black",font=font_area1,relief=FLAT,bg="white",
+activebackground="white").place(x=180,y=420)
+img1235 = ImageTk.PhotoImage(Image.open("1384031.png"))
+Button(root,image=img1235,fg="black",font=font_area1,border=2,relief=FLAT,bg="white",
+activebackground="white").place(x=150,y=450)
+
+#Discord
+
+img12356 = ImageTk.PhotoImage(Image.open("2111363.png"))
+Button(root,image=img12356,fg="black",font=font_area1,border=2,relief=FLAT,bg="white",
+activebackground="white").place(x=190,y=450)
+#github
+img123567 = ImageTk.PhotoImage(Image.open("733609.png"))
+Button(root,image=img123567,fg="black",font=font_area1,border=2,relief=FLAT,bg="white",
+activebackground="white").place(x=230,y=450)
+
+#telegram
+img1235678 = ImageTk.PhotoImage(Image.open("152827.png"))
+Button(root,image=img1235678,fg="black",font=font_area1,border=2,relief=FLAT,bg="white",
+activebackground="white").place(x=270,y=450)
+
+
+
+root.mainloop()
+
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/xgsHryP/IMG-20210530-211816.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-10">
+            <h4>PDF Encryption</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) pypdf</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-10')">Copy</button>
+                <pre id="snippet-10"><code class="snippets">
+    let nums = [10,60,49,12,369];
+    let sortedAsc = nums.sort(
+        (a,b) => a - b
+    );
+    console.log(sortedAsc);
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/d2v3SVK/PDF.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-11">
+            <h4>Notepad</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br></p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-11')">Copy</button>
+                <pre id="snippet-11"><code class="snippets">
+    let nums = [10,60,49,12,369];
+    let sortedAsc = nums.sort(
+        (a,b) => a - b
+    );
+    console.log(sortedAsc);
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/HVqqXyb/notepad.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-12">
+            <h4>Calender</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Calender<br>(3.) Pillow</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-12')">Copy</button>
+                <pre id="snippet-12"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+
+root=Tk()
+root.geometry("500x500")
+root.title("Calendar")
+root.configure(bg="black")
+img1 = ImageTk.PhotoImage(Image.open("Logo-large.png"))
+label=Label(root,image=img1)
+label.pack()
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Bradley Hand ITC",size="25",weight="bold")
+font_area1=Font(family="Britannic Bold",size="20",weight="bold")
+
+data=IntVar()
+Label(root,text="Enter Your Year..",font=font_area,bg="black",fg="white").place(x=0,y=60)
+Entry(root,textvariable=data,width=30).place(x=30,y=110,height=30)
+def genrate():
+    import calendar
+
+    x = data.get()
+    cal=calendar.calendar(x)
+    Label(root, text=cal, font=font_area1, bg="black", fg="white").place(x=200, y=200)
+
+
+Button(root,text="Genrate",font=font_area1,fg="white",bg="black",command=genrate).place(x=45,y=150)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/33.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-13">
+            <h4>Astrology</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) PyQt5<br></p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-13')">Copy</button>
+                <pre id="snippet-13"><code class="snippets">
+from PyQt5.QtCore import *
+import sys
+
+from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QWidget,QApplication
+from PyQt5.QtWebEngineWidgets import *
+from PyQt5.QtWidgets import QApplication
+
+app=QApplication(sys.argv)
+web=QWebEngineView()
+web.load(QUrl("https://ayush01arya.github.io/login/astrology.html"))
+app.setApplicationName("Astrology")
+
+web.show()
+sys.exit(app.exec_())
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/AstroGUI.png' height='200' width='200'></center></pre>
+        </section>
+<section id="section-14">
+            <h4>Sololearn</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) Beautifulsoup</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-14')">Copy</button>
+                <pre id="snippet-14"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+
+root=Tk()
+root.geometry("500x500")
+root.title("Solo-Learn")
+root.configure(bg="gray94")
+img1 = ImageTk.PhotoImage(Image.open("solologo.png"))
+label=Label(root,image=img1)
+label.place(x=50,y=0)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Bradley Hand ITC",size="25",weight="bold")
+data=StringVar()
+Label(root,text="User-Id - ",font=font_area).place(x=500,y=350)
+Entry(root,textvariable=data,width=40).place(x=700,y=360)
+
+def go():
+    import subprocess, sys
+    def install(package):
+        subprocess.call([sys.executable, "-m", "pip", "--disable-pip-version-chec", "-q", "install", package])
+
+    install("bs4")
+    install("requests")
+    import requests
+    from bs4 import BeautifulSoup
+    usr = data.get() or  "19563347"
+
+    def dc(a):
+        return a + (25 - len(a)) * " "
+
+    def dd(a):
+        return a + (9 - len(a)) * " "
+
+    def ls(a):
+        return " " + a + (37 - len(a)) * " " + ""
+
+    def middleal(a, b):
+        k = len(a)
+        return f"{a:{b}^40}"
+
+    url = "https://www.sololearn.com/Profile/" + usr + "/?ref=app"
+    raw = requests.get(url)
+    bs = BeautifulSoup(raw.text, 'html.parser')
+    Label(root,text=(middleal("Name : " + bs.find("h1", class_="name").contents[0].strip(), " ")),font=font_area).place(x=0,y=270)
+
+    Label(root,text=(middleal("Level : " + bs.find("div", class_="detail").contents[1].contents[2].strip(), " ")),font=font_area).place(x=0,y=350)
+
+    Label(root,text=(middleal("Total XP : " + bs.find("div", class_="detail").contents[3].contents[1].contents[0].strip(), " ")),font=font_area).place(x=0,y=400)
+
+
+    Label(root,text=(middleal("  ", "")),font=font_area).place(x=0,y=600)
+
+    try:
+        a = bs.find_all("div", class_="courseWrapper")
+        for i in list(a):
+            Label(root,text=(" " + dc(i.find("img").get("alt")) + " " + dd(i.find("p", class_="courseXp").contents[0]) + ""),font=font_area).place(x=0,y=800)
+    except:
+        print("no course found")
+    Label("" + 38 * " " + "").place(x=0,y=500)
+    Label(root,text="" + 38 * "" + "").place(x=0,y=600)
+
+
+
+
+def badges():
+
+    import subprocess, sys
+    def install(package):
+        subprocess.call([sys.executable, "-m", "pip", "--disable-pip-version-chec", "-q", "install", package])
+
+    install("bs4")
+    install("requests")
+    import requests
+    from bs4 import BeautifulSoup
+    usr = data.get() or   "19563347"
+
+    def dc(a):
+        return a + (25 - len(a)) * " "
+
+    def dd(a):
+        return a + (9 - len(a)) * " "
+
+    def ls(a):
+        return " " + a + (37 - len(a)) * " " + ""
+
+    def middleal(a, b):
+        k = len(a)
+        return f"{a:{b}^40}"
+
+    url = "https://www.sololearn.com/Profile/" + usr + "/?ref=app"
+    raw = requests.get(url)
+    bs = BeautifulSoup(raw.text, 'html.parser')
+    print(middleal("Name : " + bs.find("h1", class_="name").contents[0].strip(), " "))
+
+    unlock = 0
+    lock = 0
+
+    print("\n\n")
+    Label(root,text=(middleal(" Unlocked Badges ", "")),font=font_area)
+    Label(root,text=("" + (" " * 38 + ""))).place(x=1000,y=250)
+    try:
+        a = bs.find("div", class_="userAchievements full").find_all("div", class_="achievement")
+        for i in list(a):
+            if i.get("class") == ["achievement"]:
+                Label(root,text=(ls(i.find("div", class_="title").contents[0].strip())),font=font_area)
+                unlock += 1
+            else:
+                pass
+
+        Label(root,text=("" + (" " * 38 + "")))
+        Label(root,text=(middleal(" Locked Badges ", "")),font=font_area)
+
+
+        for i in list(a):
+            if i.get("class") == ["achievement"]:
+                pass
+            else:
+                Label(root,text=(ls(i.find("div", class_="title").contents[0].strip())),font=font_area)
+                lock += 1
+        print("" + ("" * 38 + ""))
+    except:
+        print("Error occured")
+    print("" + (" " * 38 + ""))
+    Label(root,text=(ls("Locked badges : " + str(lock))),font=font_area).place(x=1000,y=550)
+    Label(root,text=(ls("Unlocked badges : " + str(unlock))),font=font_area).place(x=1000,y=600)
+    print("" + ("" * 38 + ""))
+Button(root,text="Course",command=go,font=font_area).place(x=590,y=590)
+Button(root,text="Badges",command=badges,font=font_area).place(x=727,y=590)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/GUI.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-15">
+            <h4>Url Shortner</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) Pyshorteners</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-15')">Copy</button>
+                <pre id="snippet-15"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import Image,ImageTk
+
+root=Tk()
+root.geometry("1000x500")
+root.title("URL Shortener")
+Label(text="Name",bg="yellow").grid(row=1, column=0, padx=90)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+
+
+img2 = ImageTk.PhotoImage(Image.open("url_back.png"))
+labelq=Label(root,image=img2)
+labelq.place(x=0,y=0)
+
+img1 = ImageTk.PhotoImage(Image.open("url1.png"))
+label=Label(root,image=img1)
+label.place(x=100,y=10)
+font_area=Font(family="Bradley Hand ITC",size="25",weight="bold")
+data=StringVar()
+Label(root,text="Enter Your Url  ",font=font_area,bg="gold",fg="black").place(x=250,y=300)
+Entry(root,textvariable=data,width=50).place(x=600,y=310)
+def convert():
+    import pyshorteners
+    link = data.get()
+    shortner = pyshorteners.Shortener()
+    x = shortner.tinyurl.short(link)
+    Label(root,text=x,fg="black").place(x=450,y=410)
+
+
+
+Button(root,text="Convert",bg="gold",fg="black",font=font_area,command=convert).place(x=550,y=450)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/GUI2.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-16">
+            <h4>Temprature Conversion</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br></p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-16')">Copy</button>
+                <pre id="snippet-16"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+root=Tk()
+root.geometry("500x500")
+root.title("Tempratue")
+root.configure(bg="white")
+img1 = ImageTk.PhotoImage(Image.open("ctof.png"))
+label=Label(root,image=img1)
+label.place(x=20,y=250)
+
+img2 = ImageTk.PhotoImage(Image.open("ftoc.png"))
+label2=Label(root,image=img2)
+label2.place(x=1050,y=250)
+
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Britannic Bold",size=40,weight="bold")
+font_area1=Font(family="Bradley Hand ITC",size="20",weight="bold")
+Label(root,text="Temperature Conversion",font=font_area,bg="white",fg="black").pack()
+c=IntVar()
+f=IntVar()
+Entry(root,textvariable=c,width=30,bg="gold").place(x=100,y=345,height=30)
+Entry(root,textvariable=f,width=30,bg="gold").place(x=1120,y=345,height=30)
+def ctof():
+    c1=c.get()
+    f=float(c1*9/5)+32
+    Label(root,text=f,bg="white",fg="black",font=font_area1).place(x=650,y=415)
+def ftoc():
+    f1=f.get()
+    c=float(f1-32)*5/9
+    Label(root, text=c, bg="white", fg="black", font=font_area1).place(x=650, y=415)
+
+img3 = ImageTk.PhotoImage(Image.open("celsius.png"))
+label3=Label(root,image=img3)
+label3.place(x=5,y=315)
+
+img4 = ImageTk.PhotoImage(Image.open("fahrenheit.png"))
+label4=Label(root,image=img4)
+label4.place(x=1000,y=315)
+
+img5 = ImageTk.PhotoImage(Image.open("360.jpg"))
+label5=Label(root,image=img5)
+label5.place(x=550,y=415)
+
+
+Button(root,text="Convert *C To *F",fg="black",bg="white",font=font_area1,command=ctof).place(x=25,y=400)
+Button(root,text="Convert *F To *C",fg="black",bg="white",font=font_area1,command=ftoc).place(x=1090,y=400)
+
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/GUI21.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-17">
+            <h4>Body Mass Index</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br></p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-17')">Copy</button>
+                <pre id="snippet-17"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+
+root=Tk()
+root.geometry("500x500")
+root.title("BMI")
+root.configure(bg="white")
+font1=Font(family="Britannic Bold",size="50",weight="bold")
+Label(root,text="Body Mass Index \n Calculator",bg="white",fg="black",font=font1).pack()
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Bradley Hand ITC",size="25",weight="bold")
+weigth=IntVar()
+heigth=IntVar()
+weigth1 = ImageTk.PhotoImage(Image.open("weight-scale.png"))
+labelw=Label(root,image=weigth1)
+labelw.place(x=500,y=250)
+scroll_y=Scrollbar(root)
+scroll_y.pack(side=RIGHT,fill=Y)
+button = ImageTk.PhotoImage(Image.open("switch.png"))
+lab=Label(root,image=button)
+
+heigth1 = ImageTk.PhotoImage(Image.open("height.png"))
+labelh=Label(root,image=heigth1)
+labelh.place(x=500,y=310)
+Label(root,text="Weigth(g)",bg="white",fg="black",font=font_area).place(x=550,y=250)
+Label(root,text="Heigth(cm)",bg="white",fg="black",font=font_area).place(x=550,y=310)
+Entry(root,textvariable=weigth,width=34,bg="lightgreen").place(x=750,y=250,height=40)
+Entry(root,textvariable=heigth,width=34,bg="lightgreen").place(x=750,y=310,height=40)
+def cal():
+    # BMI calculator
+    # weight in kg
+    # height in meters (float)
+
+    weight2 = weigth.get()
+    height2 = heigth.get()
+
+    bmi = (weight2 / height2) ** 2
+
+    if bmi < 18.5:
+        under = ImageTk.PhotoImage(Image.open("underweigth.png"))
+        labelu = Label(root, image=under)
+
+
+
+        Label(root,text="Under Weigth \N{winking face}",fg="black",bg="white",font=font1).place(x=550,y=500)
+    elif 18.5 <= bmi < 25:
+
+        Label(root, text="Normal \N{winking face}", fg="black", bg="white", font=font1).place(x=550,y=500)
+    elif 25 <= bmi < 30:
+
+        Label(root, text="Overweight \N{grinning face}", fg="black", bg="white", font=font1).place(x=550,y=500)
+    elif bmi >= 30:
+
+        Label(root, text="Obesity \N{winking face}", fg="black", bg="white", font=font1).place(x=550,y=500)
+Button(root,text="Result",bg="white",image=button,fg="black",font=font_area,command=cal).place(x=650,y=400)
+root.mainloop()
+
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/GUI22.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-18">
+            <h4>Login</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) mysql</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-18')">Copy</button>
+                <pre id="snippet-18"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+from tkinter import messagebox
+root=Tk()
+mining=ImageTk.PhotoImage(Image.open("construction.png"))
+root.geometry("550x500")
+root.title("Login")
+root.configure(bg="white")
+root.resizable(0,0)
+font1=Font(family="Britannic Bold",size="50",weight="bold")
+font2=Font(family="Comic Sans MS",size="20",weight="bold")
+
+Label(root,text="WELCOME",bg="white",fg="black",font=font1).place(x=150,y=20)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+photo=ImageTk.PhotoImage(Image.open("user.png"))
+Label(root,image=photo).place(x=45,y=200)
+font_area=Font(family="Bradley Hand ITC",size="25",weight="bold")
+
+username=StringVar()
+password=StringVar()
+phone=StringVar()
+pho=ImageTk.PhotoImage(Image.open("password.png"))
+Label(root,image=pho).place(x=45,y=270)
+Label(root,text="Username ",font=font_area,bg="white",fg="black").place(x=80,y=200)
+Label(root,text="Password ",font=font_area,bg="white",fg="black").place(x=80,y=270)
+login=ImageTk.PhotoImage(Image.open("login.png"))
+Entry(root,textvariable=username,bg="orange",width=30).place(x=300,y=210,height=30)
+Entry(root,textvariable=password,bg="orange",width=30).place(x=300,y=280,height=30)
+
+Button(root,image=login,bg="orange",fg="orange").place(x=230,y=350)
+google=ImageTk.PhotoImage(Image.open("search.png"))
+Button(root,image=google,bg="orange",fg="orange").place(x=270,y=430)
+instagram=ImageTk.PhotoImage(Image.open(("instagram_2.png")))
+Button(root,image=instagram,bg="orange",fg="orange").place(x=340,y=430)
+twitter=ImageTk.PhotoImage(Image.open("twitter_2.png"))
+Button(root,image=twitter,bg="orange",fg="orange").place(x=200,y=430)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/Login.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-19">
+            <h4>Music Player</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) PyQt5<br></p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-19')">Copy</button>
+                <pre id="snippet-19"><code class="snippets">
+from PyQt5.QtCore import *
+import sys
+
+from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QWidget,QApplication
+from PyQt5.QtWebEngineWidgets import *
+from PyQt5.QtWidgets import QApplication
+
+app=QApplication(sys.argv)
+web=QWebEngineView()
+web.load(QUrl("https://ayush01arya.github.io/login/music.html"))
+app.setApplicationName("MUSIC GUI")
+web.show()
+sys.exit(app.exec_())
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/Music_gui.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-20">
+            <h4>Text 2 Speech</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) pyaudio</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-20')">Copy</button>
+                <pre id="snippet-20"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+from tkinter import messagebox
+root=Tk()
+root.geometry("500x500")
+root.title("Text 2 Audio")
+root.configure(bg="white")
+font1=Font(family="Britannic Bold",size="50",weight="bold")
+font2=Font(family="Britannic Bold",size="30",weight="bold")
+ashoka=ImageTk.PhotoImage(Image.open("note.png"))
+Label(root,image=ashoka).place(x=100,y=43)
+arrow=ImageTk.PhotoImage(Image.open("fast-forward.png"))
+Label(root,image=arrow).place(x=210,y=52)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Bradley Hand ITC",size="15",weight="bold")
+mining=ImageTk.PhotoImage(Image.open("headphone.png"))
+Label(root,image=mining).place(x=300,y=43)
+text=StringVar()
+Entry(root,textvariable=text,bg="grey",width=73).place(x=30,y=200,height=210)
+def convert():
+    from gtts import gTTS
+    from playsound import playsound
+    audio='speech.mp3'
+    language='en'
+    sp=gTTS(text.get() ,lang=language,slow=False)
+    sp.save(audio)
+    playsound(audio)
+
+
+b=ImageTk.PhotoImage(Image.open("sound.png"))
+Button(root,image=b,command=convert).place(x=130,y=430)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/Text_GUI.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-21">
+            <h4>Weather Forcast</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) PyQt5<br></p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-21')">Copy</button>
+                <pre id="snippet-21"><code class="snippets">
+from PyQt5.QtCore import *
+import sys
+
+from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QWidget,QApplication
+from PyQt5.QtWebEngineWidgets import *
+from PyQt5.QtWidgets import QApplication
+
+app=QApplication(sys.argv)
+web=QWebEngineView()
+web.load(QUrl("https://ayush01arya.github.io/login/weather.html"))
+app.setApplicationName("Weather Forcast")
+web.show()
+sys.exit(app.exec_())
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/a45.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-22">
+            <h4>Contact Info</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) mysql</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-22')">Copy</button>
+                <pre id="snippet-22"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+from tkinter import messagebox
+root=Tk()
+root.geometry("550x500")
+root.title("Conatct Diary")
+root.configure(bg="white")
+root.resizable(0,0)
+font1=Font(family="Britannic Bold",size="50",weight="bold")
+font2=Font(family="Comic Sans MS",size="20",weight="bold")
+ashoka=ImageTk.PhotoImage(Image.open("diary.png"))
+Label(root,image=ashoka).place(x=450,y=30)
+Label(root,text="Contact - Info",bg="white",fg="black",font=font1).place(x=10,y=20)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Bradley Hand ITC",size="25",weight="bold")
+mining=ImageTk.PhotoImage(Image.open("construction.png"))
+name=StringVar()
+address=StringVar()
+phone=StringVar()
+namep=ImageTk.PhotoImage(Image.open("profile.png"))
+Label(root,image=namep).place(x=20,y=150)
+Label(root,text="Name",bg="white",fg="black",font=font_area).place(x=70,y=150)
+Entry(root,textvariable=name,width=30,bg="lightgreen").place(x=320,y=159,height=25)
+phonep=ImageTk.PhotoImage(Image.open("phone.png"))
+Label(root,image=phonep).place(x=20,y=230)
+Label(root,text="Phone Number",bg="white",fg="black",font=font_area).place(x=70,y=230)
+Entry(root,textvariable=phone,bg="lightgreen",width=20).place(x=378,y=245,height=25)
+
+
+list_of_country=[ 'India' ,'US' , 'UK' ,'Germany' ,'Austria' ,'Iran', 'Italy']
+
+
+code=StringVar()
+droplist=OptionMenu(root,code, *list_of_country)
+droplist.config(bg="white")
+code.set('code')
+droplist.place(x=300,y=240)
+
+addressp=ImageTk.PhotoImage(Image.open("address.png"))
+Label(root,image=addressp).place(x=20,y=320)
+Label(root,text="Address",bg="white",fg="black",font=font_area).place(x=70,y=320)
+Entry(root,textvariable=address,bg="lightgreen",width=30).place(x=320,y=320,height=25)
+add=ImageTk.PhotoImage(Image.open("plus.png"))
+
+
+def addcontact():
+    with open(r"new_user_database.txt", "w") as f:
+        f.write("\n-------------------------------------------------------\n")
+        f.write("\nName = ")
+        f.write(name.get())
+        f.write("\nCountry code =")
+        f.write(code.get())
+        f.write("\nPhone = ")
+        f.write(phone.get())
+        f.write("\nAddress = ")
+        f.write(address.get())
+
+
+        f.write("\n\n--------------------------------------------------------")
+        messagebox.showinfo("Message", "Contact Update !")
+
+
+Button(root,image=add,command=addcontact).place(x=195,y=400)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/contaGUI.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-23">
+            <h4>Web Browser</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) PyQt5<br></p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-23')">Copy</button>
+                <pre id="snippet-23"><code class="snippets">
+from PyQt5.QtCore import *
+import sys
+
+from PyQt5.QtWidgets import QMainWindow,QVBoxLayout,QWidget,QApplication
+from PyQt5.QtWebEngineWidgets import *
+from PyQt5.QtWidgets import QApplication
+
+app=QApplication(sys.argv)
+web=QWebEngineView()
+web.load(QUrl("https://www.google.com"))
+app.setApplicationName("Browser")
+
+web.show()
+sys.exit(app.exec_())
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/don.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-24">
+            <h4>Saathi</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) PyQt5<br></p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-24')">Copy</button>
+                <pre id="snippet-24"><code class="snippets">
+    let nums = [10,60,49,12,369];
+    let sortedAsc = nums.sort(
+        (a,b) => a - b
+    );
+    console.log(sortedAsc);
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/donya.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-25">
+            <h4>Hacking Tool</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Pillow<br>(2.) Qrcode<br>(3.)OS</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-25')">Copy</button>
+                <pre id="snippet-25"><code class="snippets">
+from tkinter import *
+from tkinter.font import *
+import os
+from tkinter import filedialog
+from tkinter.filedialog import askopenfilename, asksaveasfilename
+from PIL import Image, ImageTk, ImageFilter, ImageEnhance, ImageOps
+from PIL import Image ,ImageTk
+root=Tk()
+root.title("Hacking Tool @Kabir Arya")
+root.configure(bg="white")
+root.geometry("700x690")
+root.resizable(0,0)
+Data=StringVar()
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+img5r = ImageTk.PhotoImage(Image.open("606640.png"))
+# create functions
+def selected():
+    global img_path, img
+    img_path = filedialog.askopenfilename(initialdir=os.getcwd())
+    img = Image.open(img_path)
+    img.thumbnail((350, 350))
+    # imgg = img.filter(ImageFilter.BoxBlur(0))
+    img1 = ImageTk.PhotoImage(img)
+    canvas2.create_image(300, 140, image=img1)
+    canvas2.image = img1
+# pixels of image and modify it
+from PIL import Image
+
+# Convert encoding data into 8-bit binary
+# form using ASCII value of characters
+def genData(data):
+
+        # list of binary codes
+        # of given data
+        newd = []
+
+        for i in data:
+            newd.append(format(ord(i), '08b'))
+        return newd
+
+# Pixels are modified according to the
+# 8-bit binary data and finally returned
+def modPix(pix, data):
+
+    datalist = genData(data)
+    lendata = len(datalist)
+    imdata = iter(pix)
+
+    for i in range(lendata):
+
+        # Extracting 3 pixels at a time
+        pix = [value for value in imdata.__next__()[:3] +
+                                imdata.__next__()[:3] +
+                                imdata.__next__()[:3]]
+
+        # Pixel value should be made
+        # odd for 1 and even for 0
+        for j in range(0, 8):
+            if (datalist[i][j] == '0' and pix[j]% 2 != 0):
+                pix[j] -= 1
+
+            elif (datalist[i][j] == '1' and pix[j] % 2 == 0):
+                if(pix[j] != 0):
+                    pix[j] -= 1
+                else:
+                    pix[j] += 1
+                # pix[j] -= 1
+
+        # Eighth pixel of every set tells
+        # whether to stop ot read further.
+        # 0 means keep reading; 1 means thec
+        # message is over.
+        if (i == lendata - 1):
+            if (pix[-1] % 2 == 0):
+                if(pix[-1] != 0):
+                    pix[-1] -= 1
+                else:
+                    pix[-1] += 1
+
+        else:
+            if (pix[-1] % 2 != 0):
+                pix[-1] -= 1
+
+        pix = tuple(pix)
+        yield pix[0:3]
+        yield pix[3:6]
+        yield pix[6:9]
+
+def encode_enc(newimg, data):
+    w = newimg.size[0]
+    (x, y) = (0, 0)
+
+    for pixel in modPix(newimg.getdata(), data):
+
+        # Putting modified pixels in the new image
+        newimg.putpixel((x, y), pixel)
+        if (x == w - 1):
+            x = 0
+            y += 1
+        else:
+            x += 1
+
+def encode():
+    img = img_path
+    image = Image.open(img, 'r')
+
+    data = Data.get()
+    if (len(data) == 0):
+        raise ValueError('Data is empty')
+
+    newimg = image.copy()
+    encode_enc(newimg, data)
+
+    new_img_name = input("Enter the name of new image(with extension) : ")
+    newimg.save(new_img_name, str(new_img_name.split(".")[1].upper()))
+
+# Decode the data in the image
+def decode():
+    img = img_path
+    image = Image.open(img, 'r')
+
+    data = ''
+    imgdata = iter(image.getdata())
+
+    while (True):
+        pixels = [value for value in imgdata.__next__()[:3] +
+                                imgdata.__next__()[:3] +
+                                imgdata.__next__()[:3]]
+
+        # string of binary data
+        binstr = ''
+
+        for i in pixels[:8]:
+            if (i % 2 == 0):
+                binstr += '0'
+            else:
+                binstr += '1'
+
+        data += chr(int(binstr, 2))
+        if (pixels[-1] % 2 != 0):
+            return data
+Label(root,image=img5r,relief=FLAT,border=0).pack()
+canvas2 = Canvas(root, width="550", height="350", relief=RIDGE, bd=2,bg="white",border=1)
+canvas2.place(x=70, y=120)
+
+img2we = ImageTk.PhotoImage(Image.open("3055736.png"))
+Button(root,image=img2we,bg="white",fg="black",relief=FLAT,command=encode).place(x=140,y=420)
+
+img22we = ImageTk.PhotoImage(Image.open("2092647.png"))
+Button(root,image=img22we,bg="white",fg="black",relief=FLAT,command=decode).place(x=370,y=420)
+
+Entry(root,textvariable=Data,bg="lightgreen",relief=FLAT,width=53).place(x=305,y=500,height=50)
+Label(root,text="Enter Your Message \n(Message to be save in image )",bg="white").place(x=70,y=510)
+img121 = ImageTk.PhotoImage(Image.open("4814764.png"))
+Button(root,image=img121,border=1,command=selected).place(x=70,y=570)
+
+img13 = ImageTk.PhotoImage(Image.open("3596144.png"))
+Button(root,image=img13,border=1,command=root.destroy).place(x=400,y=570)
+
+#logo
+Label(root,text="@Kabir Arya",fg="black",relief=FLAT,bg="white",activebackground="white").place(x=290,y=620)
+img1235 = ImageTk.PhotoImage(Image.open("1384031.png"))
+Button(root,image=img1235,fg="black",border=2,relief=FLAT,bg="white",activebackground="white").place(x=250,y=650)
+
+#Discord
+
+img12356 = ImageTk.PhotoImage(Image.open("2111363.png"))
+Button(root,image=img12356,fg="black",border=2,relief=FLAT,bg="white",activebackground="white").place(x=290,y=650)
+#github
+img123567 = ImageTk.PhotoImage(Image.open("733609.png"))
+Button(root,image=img123567,fg="black",border=2,relief=FLAT,bg="white",activebackground="white").place(x=330,y=650)
+
+#telegram
+img1235678 = ImageTk.PhotoImage(Image.open("152827.png"))
+Button(root,image=img1235678,fg="black",border=2,relief=FLAT,bg="white",activebackground="white").place(x=370,y=650)
+
+
+root.mainloop()
+
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://i.ibb.co/YBPJdBg/IMG-20210530-211517.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-26">
+            <h4>Code Genrator</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Pillow<br>(2.) Eel<br>(3.) io<br>(4.) Pyqrcode<br>(5.) Base64</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-26')">Copy</button>
+                <pre id="snippet-26"><code class="snippets">
+import io
+import pyqrcode
+from base64 import b64encode
+import eel
+
+eel.init('web')
+
+
+@eel.expose
+def dummy(dummy_param):
+    print("I got a parameter: ", dummy_param)
+    return "string_value", 1, 1.2, True, [1, 2, 3, 4], {"name": "eel"}
+
+
+@eel.expose
+def generate_qr(data):
+    img = pyqrcode.create(data)
+    buffers = io.BytesIO()
+    img.png(buffers, scale=8)
+    encoded = b64encode(buffers.getvalue()).decode("ascii")
+    print("QR code generation successful.")
+    return "data:image/png;base64, " + encoded
+
+
+eel.start('index.html', size=(1000, 600))
+
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/eel1.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-27">
+            <h4>Email</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) validate_email</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-27')">Copy</button>
+                <pre id="snippet-27"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+from tkinter import messagebox
+root=Tk()
+root.geometry("550x500")
+root.title("G-mail")
+root.configure(bg="white")
+
+font1=Font(family="Britannic Bold",size="50",weight="bold")
+font2=Font(family="Comic Sans MS",size="20",weight="bold")
+ashoka=ImageTk.PhotoImage(Image.open("gmail.png"))
+Label(root,image=ashoka).place(x=650,y=30)
+Label(root,text="G-mail",bg="white",fg="black",font=font1).place(x=450,y=20)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Bradley Hand ITC",size="25",weight="bold")
+mining=ImageTk.PhotoImage(Image.open("construction.png"))
+name=StringVar()
+address=StringVar()
+phone=StringVar()
+namep=ImageTk.PhotoImage(Image.open("user.png"))
+Label(root,image=namep).place(x=20,y=150)
+Label(root,text="Email Address",bg="white",fg="black",font=font_area).place(x=70,y=150)
+Entry(root,textvariable=name,width=30,bg="lightgreen").place(x=320,y=159,height=25)
+phonep=ImageTk.PhotoImage(Image.open("password.png"))
+Label(root,image=phonep).place(x=20,y=230)
+Label(root,text="Password",bg="white",fg="black",font=font_area).place(x=70,y=230)
+Entry(root,textvariable=phone,bg="lightgreen",width=30).place(x=320,y=245,height=25)
+check=ImageTk.PhotoImage(Image.open("check.png"))
+def verify():
+    from validate_email import validate_email
+    a=validate_email(name.get())
+    if(a==True):
+        Button(root, text="True", bg="white", fg="green", font=font_area).place(x=225, y=450)
+    else:
+        Button(root, text="False", bg="white", fg="red", font=font_area).place(x=230, y=450)
+
+
+
+Button(root,image=check,command=verify).place(x=170,y=350)
+Label(root,text="From ",bg="white",fg="black",font=font_area).place(x=800,y=90)
+Label(root,text="To ",bg="white",fg="black",font=font_area).place(x=800,y=140)
+Label(root,text="Subject ",bg="white",fg="black",font=font_area).place(x=800,y=190)
+Label(root,text="Compose Email ",bg="white",fg="black",font=font_area).place(x=800,y=240)
+fr=StringVar()
+to=StringVar()
+subject=StringVar()
+msg=StringVar()
+Entry(root,textvariable=fr,bg="lightgreen",width=30).place(x=950,y=95,height=25)
+Entry(root,textvariable=to,bg="lightgreen",width=30).place(x=950,y=140,height=25)
+Entry(root,textvariable=subject,bg="lightgreen",width=30).place(x=950,y=190,height=25)
+Entry(root,textvariable=msg,bg="lightgreen",width=60).place(x=950,y=288,height=350)
+clip=ImageTk.PhotoImage(Image.open("attachment.png"))
+list_of_country=[ 'Attach file' ,'Insert from Drive']
+
+
+clipp=StringVar()
+droplist=OptionMenu(root,clipp, *list_of_country)
+droplist.config(image=clip)
+clipp.set('code')
+droplist.place(x=940,y=20)
+def send():
+    #!usr/bin/python
+    import smtplib
+
+    sender = fr.get()
+    receivers = to.get()
+
+    message = msg.get()
+
+    try:
+        smtpObj = smtplib.SMTP('localhost')
+        smtpObj.sendmail(sender, receivers, message)
+        print("Successfully sent email")
+    except :
+        print("Error: unable to send email")
+
+
+clip2=ImageTk.PhotoImage(Image.open("paper-plane.png"))
+Button(root,image=clip2,command=send).place(x=1030,y=20)
+
+dotw=ImageTk.PhotoImage(Image.open("ellipsis.png"))
+list_of_country_dot=[ 'Schedule send','Add from Contact','Confidential mode','Save Draft','Discard','Setting','Help & Feedback']
+
+
+dot=StringVar()
+droplist=OptionMenu(root,dot, *list_of_country_dot)
+droplist.config(image=dotw)
+dot.set('code')
+droplist.place(x=1100,y=20)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/email.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-28">
+            <h4>Electricity</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br></p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-28')">Copy</button>
+                <pre id="snippet-28"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+from tkinter import messagebox
+root=Tk()
+root.geometry("500x500")
+root.title("Electricity Bill")
+root.configure(bg="white")
+font1=Font(family="Britannic Bold",size="50",weight="bold")
+font2=Font(family="Britannic Bold",size="30",weight="bold")
+ashoka=ImageTk.PhotoImage(Image.open("ashoka.jpg"))
+Button(root,image=ashoka).place(x=630,y=13)
+Label(root,text="Electricity Bill",bg="white",fg="black",font=font1).place(x=500,y=100)
+def about():
+    messagebox.showinfo("Devloper","Made by  Kabir Arya")
+def about2():
+    messagebox.showinfo("Devloper","Made by  Kabir Arya")
+ligth=ImageTk.PhotoImage(Image.open("lightning.png"))
+Button(root,image=ligth,command=about).place(x=430,y=100)
+ligth2=ImageTk.PhotoImage(Image.open("lightning.png"))
+Button(root,image=ligth2,command=about2).place(x=935,y=100)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Bradley Hand ITC",size="20",weight="bold")
+unit=IntVar()
+heigth=IntVar()
+button = ImageTk.PhotoImage(Image.open("stabilizer.png"))
+result=ImageTk.PhotoImage(Image.open("switch.png"))
+
+lab=Label(root,image=button).place(x=270,y=270)
+Label(root,text="Unit(consumed in month)",font=font_area,bg="white").place(x=350,y=300)
+Entry(root,textvariable=unit,width=40,bg="lightgreen").place(x=750,y=300,height=40)
+ruppes=ImageTk.PhotoImage(Image.open("rupee.png"))
+Label(root,image=ruppes).place(x=450,y=400)
+
+def calulate():
+    units = unit.get()
+    if (units <= 100):
+        payAmount = units * 10
+
+    elif (units <= 200):
+        payAmount = (100 * 10) + (units - 100) * 15
+
+    elif (units <= 300):
+        payAmount = (100 * 10) + (200 - 100) * 15 + (units - 200) * 20
+
+    elif (units > 300):
+        payAmount = (100 * 10) + (200 - 100) * 15 + (300 - 200) * 20 + (units - 300) * 25
+        fixedcharge = 100.00
+    else:
+        payAmount = 0
+        fixedcharge = 1500.00
+
+    Total = payAmount
+    Label(root,text=Total,bg="white",font=font2).place(x=550,y=400)
+
+
+
+
+Button(root,image=result,command=calulate).place(x=585,y=500)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/g1.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-29">
+            <h4>Bitcoin</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) BS4<br>(4.) Requests</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-29')">Copy</button>
+                <pre id="snippet-29"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+from tkinter import messagebox
+root=Tk()
+root.geometry("500x500")
+root.title("Bitcoin - Info")
+root.configure(bg="white")
+font1=Font(family="Britannic Bold",size="50",weight="bold")
+font2=Font(family="Britannic Bold",size="30",weight="bold")
+ashoka=ImageTk.PhotoImage(Image.open("bitcoin.png"))
+Label(root,image=ashoka).place(x=288,y=43)
+Label(root,text="BitCoin",bg="white",fg="black",font=font1).place(x=50,y=40)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Bradley Hand ITC",size="15",weight="bold")
+mining=ImageTk.PhotoImage(Image.open("construction.png"))
+def start():
+    from colored import stylize, fg
+    import requests
+    from bs4 import BeautifulSoup
+
+    # decoration
+
+
+    # class
+    class Scraper:
+        def __init__(self):
+            self.url = "https://www.coindesk.com/price/bitcoin"
+
+        # output magic method
+        def __repr__(self):
+            data = self.scrape(self.url)
+            current_price = stylize(data[0], fg("red"))
+            change_in_perc = stylize(data[1], fg("red"))
+            market_cap = stylize(data[2], fg("red"))
+            ath = stylize(data[3], fg("red"))
+
+            return f"Current Bitcoin price: {current_price}\
+            \nChange in % (24H): {change_in_perc}\
+            \nMarket capital: {market_cap}\nAll time high: {ath}\n"
+
+        # methods
+        def scrape(self, url):
+            page = requests.get(url)
+            soup = BeautifulSoup(page.content, 'html.parser')
+            targets = ["price-large", "percent-value-text", "price-medium", "price-small"]
+            contents = []
+
+            for target in targets:
+                result = soup.find(class_=target)
+                for info in result:
+                    contents.append(info)
+
+            contents.pop(0)
+            return contents
+
+    # main execution
+    if __name__ == "__main__":
+
+        Label(root,text=Scraper(),font=font_area,bg="white",fg="red").place(x=10,y=250)
+Button(root,image=mining,text="Start minnig",command=start).place(x=220,y=400)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/g7070.png' height='200' width='200'></center></pre>
+        </section>
+
+<section id="section-30">
+            <h4>Fake Email</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) </p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-30')">Copy</button>
+                <pre id="snippet-30"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+from tkinter import messagebox
+root=Tk()
+root.geometry("660x500")
+root.title("Email - genrator")
+root.configure(bg="white")
+font1=Font(family="Britannic Bold",size="50",weight="bold")
+font2=Font(family="Britannic Bold",size="20",weight="bold")
+ashoka=ImageTk.PhotoImage(Image.open("instagram.png"))
+Label(root,image=ashoka)
+Label(root,text="Email - Genrator",bg="white",fg="black",font=font1).place(x=250,y=40)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+font_area=Font(family="Bradley Hand ITC",size="20",weight="bold")
+mining=ImageTk.PhotoImage(Image.open("construction.png"))
+fnamee=StringVar()
+lnamee=StringVar()
+usernamepic=ImageTk.PhotoImage(Image.open("user.png"))
+Label(root,image=usernamepic).place(x=20,y=200)
+Label(root,text="First - Name ",bg="white",fg="black",font=font_area).place(x=55,y=200)
+Label(root,text="Last  - Name ",bg="white",fg="black",font=font_area).place(x=55,y=250)
+
+Entry(root,textvariable=fnamee,bg="lightgreen",width=30).place(x=300,y=200,height=30)
+Label(root,image=usernamepic).place(x=20,y=250)
+Entry(root,textvariable=lnamee,bg="lightgreen",width=30).place(x=300,y=250,height=30)
+def go():
+    # made_kabir_arya and ayush arya
+    # instagram_id-->kabir_arya001
+    # first write your first name and then your surname and press enter you can try this code in another console if didn't understand..
+    import string
+    import random
+    a = fnamee.get().lower()
+
+    print("")
+    b = lnamee.get().lower()
+    print("")
+
+    ########### making pasword
+
+    def useing_key():
+        char = ((string.ascii_letters) + (string.ascii_uppercase) + (string.digits) + (string.hexdigits) + (
+            string.punctuation))
+        key_words = (list(char))
+        return key_words
+
+    global key
+    key = (useing_key())
+
+    def between():
+        bet_3 = (string.digits)
+        ps_bt = ""
+        for i in range(7):
+            bet = random.choice(bet_3)
+            ps_bt = str(ps_bt) + str(bet)
+        return ps_bt
+
+    global pl2
+    pl2 = (between())
+
+    def PASSWORD():
+        pasword = ""
+        for i in range(16):
+            pasword_gen = random.choice(key)
+            pasword = (pasword) + (pasword_gen)
+        return pasword
+
+    global pasword_1
+    pasword_1 = (PASSWORD())
+
+    ########## for making in between
+
+    class EMAIL_why:
+
+        def __init__(self, name, last):
+            self.name = name
+            self.last = last
+            self.email = name + last + str(pl2) + ("@gmail.com")
+            self.pasw = str(pasword_1)
+
+    email_c = EMAIL_why(a, b)
+
+    Label(root,text=f"Your Email Id - {email_c.email}",font=font2,bg="white",fg="black").place(x=50,y=330)
+
+    Label(root,text=f"Your Password is - {email_c.pasw}",font=font2,bg="white",fg="black").place(x=50,y=370)
+
+
+
+
+
+
+download=ImageTk.PhotoImage(Image.open("search-results.png"))
+Button(root,image=download,command=go).place(x=350,y=450)
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/gmial.png' height='200' width='200'></center></pre>
+        </section>
+        
+<section id="section-31">
+            <h4>Stopwatch</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.)Datetime</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-31')">Copy</button>
+                <pre id="snippet-31"><code class="snippets">
+import tkinter as Tkinter
+from PIL import ImageTk,Image
+from datetime import datetime
+
+counter = 66600
+
+running = False
+
+
+def counter_label(label):
+    def count():
+
+        if running:
+
+            global counter
+
+            # To manage the intial delay.
+
+            if counter == 66600:
+
+                display = "Starting..."
+
+            else:
+
+                tt = datetime.fromtimestamp(counter)
+
+                string = tt.strftime("%H:%M:%S")
+
+                display = string
+
+            label['text'] = display  # Or label.config(text=display)
+
+            # label.after(arg1, arg2) delays by
+
+            # first argument given in milliseconds  
+
+            # and then calls the function given as second argument.  
+
+            # Generally like here we need to call the   
+
+            # function in which it is present repeatedly.  
+
+            # Delays by 1000ms=1 seconds and call count again.  
+
+            label.after(1000, count)
+
+            counter += 1
+
+    # Triggering the start of the counter.
+
+    count()
+
+
+# start function of the stopwatch  
+
+def Start(label):
+    global running
+
+    running = True
+
+    counter_label(label)
+
+    start['state'] = 'disabled'
+
+    stop['state'] = 'normal'
+
+    reset['state'] = 'normal'
+
+
+# Stop function of the stopwatch  
+
+def Stop():
+    global running
+
+    start['state'] = 'normal'
+
+    stop['state'] = 'disabled'
+
+    reset['state'] = 'normal'
+
+    running = False
+
+
+# Reset function of the stopwatch  
+
+def Reset(label):
+    global counter
+
+    counter = 66600
+
+    # If rest is pressed after pressing stop.
+
+    if running == False:
+
+        reset['state'] = 'disabled'
+
+        label['text'] = 'Welcome!'
+
+
+
+    # If reset is pressed while the stopwatch is running.  
+
+    else:
+
+        label['text'] = 'Starting...'
+
+
+root = Tkinter.Tk()
+
+root.title("Stopwatch")
+root.configure(bg="white")
+# Fixing the window size.
+
+root.minsize(width=250, height=70)
+
+label = Tkinter.Label(root, text="Welcome!", fg="white", font="Verdana 30 bold")
+label.pack()
+ashoka=ImageTk.PhotoImage(Image.open("stopwatch.png"))
+Tkinter.Label(root,image=ashoka).place(x=0,y=0)
+f = Tkinter.Frame(root)
+
+start = Tkinter.Button(f, text='Start', width=6, command=lambda: Start(label))
+
+stop = Tkinter.Button(f, text='Stop', width=6, state='disabled', command=Stop)
+
+reset = Tkinter.Button(f, text='Reset', width=6, state='disabled', command=lambda: Reset(label))
+
+f.pack(anchor='center', pady=5)
+
+start.pack(side="left")
+
+stop.pack(side="left")
+
+reset.pack(side="left")
+root.mainloop() 
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/stop23.png' height='200' width='200'></center></pre>
+        </section>
+<section id="section-32">
+            <h4>Translator</h4>
+            <div class="line"></div>
+            <h6>Module Name:</h6>
+            <p>(1.) Tkinter<br>(2.) Pillow<br>(3.) PyDictionary</p>
+            <div class="code-container">
+                <button class="copy-btn" onclick="copy('snippet-32')">Copy</button>
+                <pre id="snippet-32"><code class="snippets">
+from tkinter import *
+from tkinter.font import Font
+from PIL import ImageTk,Image
+from tkinter import messagebox
+root=Tk()
+mining=ImageTk.PhotoImage(Image.open("construction.png"))
+root.geometry("600x500")
+root.title("Login")
+root.configure(bg="white")
+root.resizable(0,0)
+font1=Font(family="Britannic Bold",size="50",weight="bold")
+font2=Font(family="Comic Sans MS",size="20",weight="bold")
+ashoka=ImageTk.PhotoImage(Image.open("translate.png"))
+Label(root,image=ashoka).place(x=400,y=30)
+Label(root,text="Translate",bg="white",fg="black",font=font1).place(x=100,y=20)
+photo=PhotoImage(file="ayushlogo.png")
+root.iconphoto(False,photo)
+photo=ImageTk.PhotoImage(Image.open("sentence-length.png"))
+Label(root,image=photo).place(x=45,y=200)
+font_area=Font(family="Bradley Hand ITC",size="25",weight="bold")
+Label(root,text="Enter the Text ",bg="white",fg="black",font=font_area).place(x=80,y=200)
+word=StringVar()
+Entry(root,textvariable=word,bg="gray94",fg="blue",width=30).place(x=310,y=210,height=30)
+list_of_country=[ 'hindi' ,'english' , 'british' ,'German' ,'chinees' ,'iranin', 'french']
+
+
+code=StringVar()
+droplist=OptionMenu(root,code, *list_of_country)
+droplist.config(bg="gray94")
+code.set('lang')
+droplist.place(x=500,y=210)
+def change():
+    # Created by Kabir Arya
+
+    import sys
+    import subprocess
+
+    # module installation
+    def install(package):
+
+        subprocess.run([
+            sys.executable, "-m", "pip", "-q", "install", package
+        ])
+
+    install("PyDictionary")
+
+    """
+
+
+        
+
+        This Is GoogleTranslator 
+
+        simple input = Happy 
+        Output in Hindi = Khush 
+
+
+    """
+
+    import PyDictionary
+    from PyDictionary import PyDictionary
+
+    def Translator():
+
+        userinput = word.get()
+
+        if userinput == '':
+
+            print("Please Fill The Input ")
+
+        else:
+
+            trans = PyDictionary()
+
+            print("English : ", userinput)
+
+            hindi = trans.translate(userinput, 'hi')
+            urdu = trans.translate(userinput, 'ur')
+
+            france = trans.translate(userinput, 'fr')
+            arebic = trans.translate(userinput, 'ar')
+            marathi = trans.translate(userinput, 'ma')
+
+            print(" Hindi : ", hindi, "\n", "Urdu : ", urdu, "\n", "France : ", france, "\n", "Arebic : ", arebic)
+            Label(root,text=hindi,fg="black",bg="white",font=font_area).place(x=300,y=400)
+    if __name__ == "__main__":
+        Translator()
+
+
+Button(root,text="Translate",bg="white",fg="black",font=font2,command=change).place(x=250,y=300)
+
+
+root.mainloop()
+                </code></pre>
+            </div>
+            
+            
+            <h6>Output:</h6>
+            <pre><center><img src='https://github.com/kabir01arya/project/raw/main/traslate.png' height='200' width='200'></center></pre>
+        </section>
+        
+
+        <!--Buttons-->
+        <div class="btn-wrapper">
+            <button id="btn-prev">Prev</button>
+            <button id="btn-next">Next</button>
+        </div>
+
+        <!-- YT Link -->
+        
+    </div>
+
+    <!-- Highlight JS Theme-->
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+    <script>
+        /* Initiate highlighting function */
+        hljs.initHighlightingOnLoad();
+
+        /* Copy Function */
+        function copy(copyId){
+            let inputElement = document.createElement("textarea");;
+            let copyText = document.getElementById(copyId).textContent;
+            inputElement.value = copyText;
+            document.body.appendChild(inputElement);
+            inputElement.select();
+            document.execCommand('copy');
+            document.body.removeChild(inputElement);
+            alert("Code Copied!")
+            
+        }
+        
+        /* Next, Prev Button */
+        let index = 1;
+        let prevBtn = document.getElementById("btn-prev");
+        let nextBtn = document.getElementById("btn-next");
+
+        nextBtn.addEventListener("click", ()=>{
+            document.getElementById(`section-${index}`).style.display = "none";
+            index < 32 ? index++ : index = 1;
+            document.getElementById(`section-${index}`).style.display = "block";
+        });
+
+        prevBtn.addEventListener("click", ()=>{
+            document.getElementById(`section-${index}`).style.display = "none";
+            index > 1 ? index-- : index = 32;
+            document.getElementById(`section-${index}`).style.display = "block";
+        });
+    </script>
+</body>
+</html>
